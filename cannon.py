@@ -15,8 +15,8 @@ def tap(x, y):
     if not inside(ball):
         ball.x = -199
         ball.y = -199
-        speed.x = (x + 200) / 25
-        speed.y = (y + 200) / 25
+        speed.x = (x + 200) / 15
+        speed.y = (y + 200) / 15
 
 
 def inside(xy):
@@ -64,10 +64,16 @@ def move():
 
     for target in targets:
         if not inside(target):
+<<<<<<< HEAD
                 target.x += randrange(50, 400)
                 target.y = randrange(-100, 200)
          
     ontimer(move, 50)
+=======
+            return
+
+    ontimer(move, 25)
+>>>>>>> 430e87896319f4499f9e9329a42b0697c79277d3
 
 
 setup(420, 420, 370, 0)
